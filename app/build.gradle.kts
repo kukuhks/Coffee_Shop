@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.ks.coffeeshop"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.ks.coffeeshop"
