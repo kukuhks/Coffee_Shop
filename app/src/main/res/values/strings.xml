@@ -3,4 +3,23 @@
     <string name="choice_your_favorite_coffee">Choice your\nFavorite Coffee</string>
     <string name="get_started">Get Started</string>
     <string name="splash">splash</string>
+    <string name="sabrina_carpenter">Sabrina Carpenter</string>
+    <string name="tina_anderson">Tina Anderson</string>
+    <string name="profile_image">Profile Image</string>
+    <string name="bell_icon">Bell Icon</string>
+    <string name="setting_icon">Setting Icon</string>
+    <string name="search">Search</string>
+    <string name="category">Category</string>
+    <string name="popular_coffees">Popular Coffees</string>
+    <string name="see_all">See All</string>
+    <string name="explorer">Explorer</string>
+    <string name="button_explorer">Button Explorer</string>
+    <string name="cart">Cart</string>
+    <string name="wishlist">Wishlist</string>
+    <string name="my_order">My Order</string>
+    <string name="profile">Profile</string>
+    <string name="button_cart">button_cart</string>
+    <string name="button_wishlist">Button Wishlist</string>
+    <string name="button_order">Button Order</string>
+    <string name="button_profile">Button Profile</string>
 </resources>
