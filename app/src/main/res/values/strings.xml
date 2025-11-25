@@ -22,4 +22,7 @@
     <string name="button_wishlist">Button Wishlist</string>
     <string name="button_order">Button Order</string>
     <string name="button_profile">Button Profile</string>
+    <string name="title">title</string>
+    <string name="subtitle">subtitle</string>
+    <string name="price">$-</string>
 </resources>

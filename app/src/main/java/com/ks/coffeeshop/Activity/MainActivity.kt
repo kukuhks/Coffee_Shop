@@ -8,9 +8,11 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.ks.coffeeshop.Adapter.CategoryAdapter
+import com.ks.coffeeshop.Adapter.PopularAdapter
 import com.ks.coffeeshop.R
 import com.ks.coffeeshop.ViewModel.MainViewModel
 import com.ks.coffeeshop.databinding.ActivityMainBinding
@@ -27,6 +29,17 @@ class MainActivity : AppCompatActivity() {
 
         initBanner()
         initCategory()
+        initPopular()
+    }
+
+    private fun initPopular() {
+        binding.progressBarPopular.visibility = View.VISIBLE
+        viewModel.loadPopular().observeForever {
+            binding.popularView.layoutManager = GridLayoutManager(this, 2)
+            binding.popularView.adapter = PopularAdapter(it)
+            binding.progressBarPopular.visibility = View.GONE
+        }
+        viewModel.loadPopular()
     }
 
     private fun initCategory() {
