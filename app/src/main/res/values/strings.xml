@@ -28,4 +28,16 @@
     <string name="list">List</string>
     <string name="back">Back</string>
     <string name="button_back">Button Back</string>
+    <string name="button_favorite">Button Favorite</string>
+    <string name="coffee_size">Coffee Size</string>
+    <string name="small">Small</string>
+    <string name="medium">Medium</string>
+    <string name="large">Large</string>
+    <string name="qty">Qty.</string>
+    <string name="strip">-</string>
+    <string name="number">1</string>
+    <string name="plus">+</string>
+    <string name="button_star">Button Star</string>
+    <string name="description">Description</string>
+    <string name="add_to_cart">Add to Cart</string>
 </resources>

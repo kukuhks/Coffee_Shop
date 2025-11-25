@@ -2,10 +2,12 @@ package com.ks.coffeeshop.Adapter
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.ks.coffeeshop.Activity.DetailActivity
 import com.ks.coffeeshop.Domain.ItemsModel
 import com.ks.coffeeshop.databinding.ViewholderItemListBinding
 
@@ -29,7 +31,9 @@ class ItemsListCategoryAdapter(val items: MutableList<ItemsModel>): RecyclerView
             .load(items[position].picUrl[0])
             .into(holder.binding.pic)
         holder.itemView.setOnClickListener{
-
+            val intent = Intent(context, DetailActivity::class.java)
+            intent.putExtra("object", items[position])
+            context.startActivity(intent)
         }
     }
 
