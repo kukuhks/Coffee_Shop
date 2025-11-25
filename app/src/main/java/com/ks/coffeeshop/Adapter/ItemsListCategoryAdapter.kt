@@ -1,0 +1,38 @@
+package com.ks.coffeeshop.Adapter
+
+import android.annotation.SuppressLint
+import android.content.Context
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.ks.coffeeshop.Domain.ItemsModel
+import com.ks.coffeeshop.databinding.ViewholderItemListBinding
+
+class ItemsListCategoryAdapter(val items: MutableList<ItemsModel>): RecyclerView.Adapter<ItemsListCategoryAdapter.ViewHolder>() {
+
+    lateinit var context: Context
+    class ViewHolder(val binding: ViewholderItemListBinding): RecyclerView.ViewHolder(binding.root)
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        context = parent.context
+        val binding = ViewholderItemListBinding.inflate(LayoutInflater.from(context), parent, false)
+        return ViewHolder(binding)
+    }
+
+    @SuppressLint("SetTextI18n")
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        holder.binding.titleTxt.text = items[position].title
+        holder.binding.priceTxt.text = "$"+items[position].price.toString()
+        holder.binding.subtitleTxt.text = items[position].extra
+        Glide.with(context)
+            .load(items[position].picUrl[0])
+            .into(holder.binding.pic)
+        holder.itemView.setOnClickListener{
+
+        }
+    }
+
+    override fun getItemCount(): Int = items.size
+
+}

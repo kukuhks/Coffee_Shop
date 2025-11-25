@@ -7,7 +7,9 @@ import android.os.Handler
 import android.os.Looper
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.ks.coffeeshop.Activity.ItemsListActivity
 import com.ks.coffeeshop.Domain.CategoryModel
 import com.ks.coffeeshop.R
 import com.ks.coffeeshop.databinding.ViewholderCategoryBinding
@@ -37,7 +39,11 @@ class CategoryAdapter(val items: MutableList<CategoryModel>): RecyclerView.Adapt
             notifyItemChanged(selectedPosition)
 
             Handler(Looper.getMainLooper()).postDelayed({
-
+            val intent = Intent(context, ItemsListActivity::class.java).apply {
+                putExtra("id", item.id.toString())
+                putExtra("title", item.title)
+            }
+                ContextCompat.startActivity(context, intent, null)
             },500)
         }
         if (selectedPosition == position){

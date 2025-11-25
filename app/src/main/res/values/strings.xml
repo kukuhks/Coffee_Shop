@@ -25,4 +25,7 @@
     <string name="title">title</string>
     <string name="subtitle">subtitle</string>
     <string name="price">$-</string>
+    <string name="list">List</string>
+    <string name="back">Back</string>
+    <string name="button_back">Button Back</string>
 </resources>
